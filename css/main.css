@@ -1,6 +1,9 @@
 /* Start Variables */
 
-:root {}
+:root {
+    --main-color: #d19c97;
+    --para-color: #1C1C1C;
+}
 
 /* End Variables */
 
@@ -60,3 +63,139 @@ ul {
 
 /* Start Component */
 /* End Component */
+
+/* Start Header */
+
+header .up-head {
+    padding: 10px 20px;
+    background-color: #edf1ff;
+    color: var(--para-color, #1C1C1C);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    header .up-head {
+        justify-content: center;
+    }
+}
+
+header .up-head .links {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    header .up-head .links {
+        display: none;
+    }
+}
+
+header .up-head .links a {
+    color: var(--para-color, #1C1C1C);
+    padding: 0 10px;
+    display: block;
+}
+
+header .up-head .links a:hover {
+    text-decoration: underline;
+}
+
+header .up-head .links a:not(a:last-of-type) {
+    border-right: 1px solid var(--para-color, #1C1C1C);
+}
+
+header .up-head .social i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+header .main-head {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    header .main-head a {
+        display: none;
+    }
+}
+
+header .main-head a .logo {
+    display: flex;
+    align-items: center;
+}
+
+
+header .main-head a .logo span {
+    display: block;
+    font-size: 39px;
+    color: var(--main-color, #d19c97);
+    font-weight: bold;
+    border: 1px solid #edf1ff;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+header .main-head a .logo h1 {
+    margin: 0%;
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--para-color, #1C1C1C);
+}
+
+header .main-head .input {
+    width: 55%;
+    position: relative;
+}
+
+header .main-head .input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #edf1ff;
+}
+
+header .main-head .input input:focus {
+    outline: none;
+}
+
+header .main-head .input .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #edf1ff;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--main-color, #d19c97);
+}
+
+header .main-head .stats {
+    display: flex;
+    align-items: center;
+}
+
+header .main-head .stats div {
+    border: 1px solid #edf1ff;
+    padding: 10px;
+    margin-right: 5px;
+    color: var(--main-color, #d19c97);
+    cursor: pointer;
+}
+
+header .main-head .stats div span {
+    color: var(--para-color, #1C1C1C);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+header .main-head .stats div i {
+    margin-right: 5px;
+}
+
+/* End Header */
