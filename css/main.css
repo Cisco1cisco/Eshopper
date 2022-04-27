@@ -700,5 +700,122 @@ header .main-head .stats div i {
     background-color: white;
 }
 
-
 /* End Categories */
+
+/* Start Offers */
+
+.offers {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.offers .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1199px) {
+    .offers .container {
+        width: auto;
+    }
+}
+
+.offers .container .offer {
+    flex-basis: calc((100% / 2) - 10px);
+    background-color: #edf1ff;
+    position: relative;
+    padding: 50px;
+}
+
+@media (max-width: 768px) {
+    .offers .container .offer {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.offers .container .offer.left {
+    text-align: right;
+}
+
+.offers .container .offer img {
+    position: absolute;
+    bottom: 0;
+}
+
+.offers .container .offer.left img {
+    width: 140px;
+}
+
+.offers .container .offer.right img {
+    width: 180px;
+}
+
+.offers .container .offer.left img {
+    left: 0;
+}
+
+.offers .container .offer.right img {
+    right: 0;
+}
+
+.offers .container .offer .text {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .offers .container .offer .text {
+        text-align: center;
+    }
+}
+
+.offers .container .offer .text h5 {
+    color: var(--main-color, #d19c97);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.offers .container .offer .text h1 {
+    color: var(--para-color, #1C1C1C);
+    font-size: 39px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .offers .container .offer .text h1 {
+        font-size: 30px;
+    }
+}
+
+.offers .container .offer .text a {
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--main-color, #c17a74);
+    color: var(--main-color, #c17a74);
+    padding: 10px 20px;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+@media (max-width: 768px) {
+    .offers .container .offer .text a {
+        margin: 0 auto;
+    }
+}
+
+.offers .container .offer .text a:hover {
+    background-color: var(--main-color, #d19c97);
+    color: var(--para-color, #1C1C1C);
+}
+
+.offers .container .offer.left .text a {
+    margin-left: auto;
+}
+
+/* End Offers */
