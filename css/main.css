@@ -572,3 +572,52 @@ header .main-head .stats div i {
 }
 
 /* End Landing */
+
+/* Start Features */
+
+.features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features .container .box {
+    flex-basis: calc((100% / 4) - 30px);
+    display: flex;
+    align-items: center;
+    border: 1px solid #edf1ff;
+    padding: 25px 30px;
+}
+
+@media (max-width: 991px) {
+    .features .container .box {
+        flex-basis: calc((100% / 2) - 30px);
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features .container .box {
+        flex-basis: 100%;
+    }
+}
+
+.features .container .box i {
+    color: var(--main-color, #d19c97);
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.features .container .box h5 {
+    font-size: 20px;
+    color: var(--para-color, #1C1C1C);
+    font-weight: 600;
+}
+
+/* End Features */
