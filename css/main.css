@@ -1084,3 +1084,218 @@ header .main-head .stats div i {
 }
 
 /* End Vendors */
+
+/* Start Footer */
+
+footer {
+    padding-top: var(--section-padd, 50px);
+    background-color: var(--sub-color, #edf1ff);
+}
+
+footer .up-section {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--sub-color, #edf1ff);
+}
+
+footer .up-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--para-color, #1C1C1C);
+}
+
+@media (max-width: 1199px) {
+    footer .up-section .container {
+        width: auto;
+    }
+}
+
+footer .up-section .container>div {
+    flex-basis: calc((100% / 4) - 10px);
+}
+
+@media (max-width: 991px) {
+    footer .up-section .container>div {
+        flex-basis: calc((100% / 3) - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    footer .up-section .container>div {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+footer .up-section .container>div .logo {
+    margin-bottom: 20px;
+}
+
+footer .up-section .container>div .logo span {
+    border-color: white;
+}
+
+@media (max-width: 991px) {
+    footer .up-section .container div.main-p {
+        flex-basis: 100%;
+    }
+}
+
+footer .up-section .container div.main-p>p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+footer .up-section .container div.main-p .info p {
+    margin-bottom: 10px;
+}
+
+footer .up-section .container div.main-p .info p i {
+    color: var(--main-color, #d19c97);
+    margin-right: 10px;
+}
+
+footer .up-section .container>div.links {
+    padding: 20px 20px 0;
+}
+
+@media (max-width: 768px) {
+    footer .up-section .container>div.links {
+        padding: 20px 0;
+    }
+}
+
+footer .up-section .container div h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+footer .up-section .container div ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: var(--para-color, #1C1C1C);
+    position: relative;
+}
+
+footer .up-section .container div ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .up-section .container div ul li a::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+footer .up-section .container div.form form input {
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+footer .up-section .container div.form form input:focus {
+    outline: none;
+}
+
+footer .up-section .container div.form form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-color, #d19c97);
+    color: var(--para-color, #1C1C1C);
+    padding: 15px 10px;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+footer .up-section .container div.form form button:hover {
+    background-color: #c5837c;
+    color: white;
+}
+
+footer .down-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .down-section p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+footer .down-section p a {
+    color: var(--para-color, #1C1C1C);
+    font-weight: 600;
+}
+
+footer .down-section p a:hover {
+    text-decoration: underline;
+}
+
+footer .down-section .pay img {
+    max-width: 100%;
+}
+
+/* End Footer */
+
+/* Start Scroll */
+
+a.scroll {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--main-color, #d19c97);
+    color: var(--para-color, #1C1C1C);
+    padding: 10px 12px;
+    animation: scroll 1s infinite alternate;
+    -webkit-animation: scroll 1s infinite alternate;
+    z-index: 9;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+a.scroll:hover {
+    background-color: #c5837c;
+    color: white;
+}
+
+/* End Scroll */
+
+/* Start Animation */
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -o-transform: translateY(-15px);
+    }
+}
+
+/* End Animation */
