@@ -883,7 +883,7 @@ header .main-head .stats div i {
     }
 }
 
-.products .container .product {
+.products .product {
     flex-basis: calc((100% / 4) - 30px);
     border: 1px solid var(--sub-color, #edf1ff);
     margin-bottom: 40px;
@@ -903,13 +903,13 @@ header .main-head .stats div i {
     }
 }
 
-.products .container .product .image {
+.products .product .image {
     position: relative;
     z-index: -1;
 }
 
 
-.products .container .product .image img {
+.products .product .image img {
     max-width: 100%;
     transition: var(--tran-dur, 0.3s);
     -webkit-transition: var(--tran-dur, 0.3s);
@@ -918,7 +918,7 @@ header .main-head .stats div i {
     -o-transition: var(--tran-dur, 0.3s);
 }
 
-.products .container .product:hover .image img {
+.products .product:hover .image img {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -926,28 +926,28 @@ header .main-head .stats div i {
     -o-transform: scale(1.1);
 }
 
-.products .container .product .info {
+.products .product .info {
     padding: 25px;
     background-color: white;
     border-top: 1px solid var(--sub-color, #edf1ff);
 }
 
-.products .container .product .info h6 {
+.products .product .info h6 {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.products .container .product .info span {
+.products .product .info span {
     font-weight: 600;
     margin-right: 15px;
 }
 
-.products .container .product .info del {
+.products .product .info del {
     color: #6c757d;
 }
 
-.products .container .product .bar {
+.products .product .bar {
     padding: 15px 10px;
     display: flex;
     justify-content: space-between;
@@ -955,7 +955,7 @@ header .main-head .stats div i {
     border-top: 1px solid var(--sub-color, #edf1ff);
 }
 
-.products .container .product .bar a {
+.products .product .bar a {
     display: block;
     transition: var(--tran-dur, 0.3s);
     -webkit-transition: var(--tran-dur, 0.3s);
@@ -967,16 +967,16 @@ header .main-head .stats div i {
 }
 
 @media (min-width: 1199px) {
-    .products .container .product .bar a {
+    .products .product .bar a {
         margin-right: 10px;
     }
 }
 
-.products .container .product .bar a:hover {
+.products .product .bar a:hover {
     color: var(--main-color, #d19c97);
 }
 
-.products .container .product .bar a i {
+.products .product .bar a i {
     color: var(--main-color, #d19c97);
 }
 
@@ -1228,7 +1228,15 @@ footer .up-section .container div.form form button:hover {
 
 footer .down-section {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    footer .down-section {
+        display: block;
+    }
 }
 
 footer .down-section p {
