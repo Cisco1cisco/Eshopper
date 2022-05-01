@@ -593,3 +593,211 @@ input:checked~.checkmark {
 }
 
 /* End Details */
+
+/* Start Cart */
+
+.cart {
+    padding-top: var(--section-padd, 50px);
+    padding-bottom: var(--section-padd, 50px);
+}
+
+.cart .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (max-width: 1199px) {
+    .cart .container {
+        width: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .cart .container {
+        flex-direction: column;
+    }
+}
+
+.cart .container .table {
+    flex-basis: 70%;
+}
+
+.cart .container .table::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .cart .container .table {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart .container .table {
+        overflow-x: scroll;
+    }
+}
+
+.cart .container .table table {
+    border-collapse: collapse;
+    color: #6F6F6F;
+    width: 100%;
+}
+
+.cart .container table th {
+    background-color: var(--sub-color, #edf1ff);
+    color: var(--para-color, #1C1C1C);
+    padding: 20px;
+    text-align: center;
+}
+
+.cart .container table th,
+.cart .container table td {
+    border: 1px solid var(--sub-color, #edf1ff);
+}
+
+.cart .container table img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.cart .container table tr td:first-of-type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+}
+
+.cart .container table tr td:not(td:first-of-type) {
+    text-align: center;
+}
+
+.cart .container table tr td button {
+    background-color: var(--main-color, #d19c97);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+.cart .container table tr td button:hover {
+    color: white;
+    background-color: #c5837c;
+}
+
+.cart .container table tr td:nth-last-of-type(3) button {
+    margin: -4px;
+}
+
+.cart .container table tr td:nth-last-of-type(3) input {
+    width: 30px;
+    border: none;
+    text-align: center;
+    background-color: var(--sub-color, #edf1ff);
+    padding: 10px;
+}
+
+.cart .container table tr td:nth-last-of-type(3) input:focus {
+    outline: none;
+}
+
+.cart .container .check {
+    flex-basis: 27%;
+}
+
+@media (max-width: 991px) {
+    .cart .container .check {
+        width: 100%;
+    }
+}
+
+.cart .container .check .coupon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.cart .container .check .coupon input {
+    padding: 15px;
+    border: 1px solid var(--sub-color, #edf1ff);
+    height: 50px;
+    width: 100%;
+}
+
+.cart .container .check .coupon input:focus {
+    outline: none;
+}
+
+.cart .container .check .coupon button {
+    border: none;
+    color: var(--para-color);
+    background-color: var(--main-color, #d19c97);
+    padding: 17px 6px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+    height: 50px;
+}
+
+.cart .container .check .coupon button:hover {
+    background-color: #c5837c;
+    color: white;
+}
+
+.cart .container .check .sum {
+    border: 1px solid var(--sub-color, #edf1ff);
+}
+
+.cart .container .check .sum h4 {
+    font-size: 24px;
+    background-color: var(--sub-color, #edf1ff);
+    font-weight: 600;
+    padding: 20px;
+
+}
+
+.cart .container .check .sum div:not(div.total) {
+    padding: 20px 10px;
+    font-size: 16px;
+    color: var(--para-color, #1C1C1C);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.cart .container .check .sum div.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-top: 1px solid var(--sub-color, #edf1ff);
+}
+
+.cart .container .check .sum div.total h5 {
+    font-size: 20px;
+}
+
+.cart .container .check button.out {
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background-color: var(--main-color, #d19c97);
+    width: calc(100% - 30px);
+    padding: 20px;
+}
+
+/* End Cart */
