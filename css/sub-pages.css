@@ -54,6 +54,62 @@
     color: #6F6F6F;
 }
 
+.put {
+    position: relative;
+}
+
+
+.put input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    z-index: 1;
+}
+
+.put .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 1px solid var(--sub-color, #edf1ff);
+    cursor: pointer;
+}
+
+input:checked~.checkmark {
+    background-color: var(--main-color, #d19c97);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+input:checked~.checkmark:after {
+    display: flex;
+}
+
+.checkmark:after {
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 12px;
+    background-color: var(--main-color, #d19c97);
+    font-family: "Font Awesome 5 Free";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 /* End Component */
 
 /* Start Shop */
@@ -114,58 +170,6 @@
 
 .shop .container .lists ul li .put {
     position: relative;
-}
-
-
-.shop .container .lists ul li .put input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    z-index: 1;
-}
-
-.shop .container .lists ul li .put .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: white;
-    border: 1px solid var(--sub-color, #edf1ff);
-    cursor: pointer;
-}
-
-input:checked~.checkmark {
-    background-color: var(--main-color, #d19c97);
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.container input:checked~.checkmark:after {
-    display: flex;
-}
-
-.container .checkmark:after {
-    content: "\f00c";
-    font-weight: 900;
-    font-size: 12px;
-    background-color: var(--main-color, #d19c97);
-    font-family: "Font Awesome 5 Free";
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
 .shop .container .lists ul li span:not(span.checkmark) {
@@ -798,6 +802,265 @@ input:checked~.checkmark {
     background-color: var(--main-color, #d19c97);
     width: calc(100% - 30px);
     padding: 20px;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+    cursor: pointer;
+}
+
+.cart .container .check button.out:hover {
+    background-color: #c5837c;
+    color: white;
 }
 
 /* End Cart */
+
+/* Start Checkout */
+
+.checkout {
+    padding-top: var(--section-padd, 50px);
+    padding-bottom: var(--section-padd, 50px);
+}
+
+.checkout .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (max-width: 1199px) {
+    .checkout .container {
+        width: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .checkout .container {
+        flex-direction: column;
+    }
+}
+
+.checkout .container .address {
+    flex-basis: 66%;
+}
+
+@media (max-width: 991px) {
+    .checkout .container .address {
+        width: 100%;
+    }
+}
+
+.checkout .container .address h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--para-color, #1C1C1C);
+    margin-bottom: 20px;
+}
+
+.checkout .container .address .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .checkout .container .address .content {
+        flex-direction: column;
+    }
+}
+
+.checkout .container .address .content div.field {
+    flex-basis: calc((100% - 30px) / 2);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .checkout .container .address .content div.field {
+        width: 100%;
+    }
+}
+
+.checkout .container .address .content div.field label {
+    color: #6F6F6F;
+    margin-bottom: 10px;
+}
+
+.checkout .container .address .content div.field input,
+.checkout .container .address .content div.field select {
+    padding: 10px;
+    border: 1px solid var(--sub-color, #edf1ff);
+}
+
+.checkout .container .address .content div.field input:focus,
+.checkout .container .address .content div.field select:focus {
+    outline: none;
+}
+
+.checkout .container .address .content div.field form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.checkout .container .address .content div.field form .put {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkout .container .address .content div.field form .put label {
+    margin-left: 40px;
+}
+
+.checkout .container .last-panal {
+    flex-basis: 31%;
+}
+
+@media (max-width: 991px) {
+    .checkout .container .last-panal {
+        width: 100%;
+    }
+}
+
+.checkout .container .last-panal .order {
+    border: 1px solid var(--sub-color, #edf1ff);
+    margin-bottom: 40px;
+}
+
+.checkout .container .last-panal .order h4,
+.checkout .container .last-panal .pay h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    background-color: var(--sub-color, #edf1ff);
+}
+
+.checkout .container .last-panal .order .first-div {
+    margin-bottom: 10px;
+}
+
+.checkout .container .last-panal .order .first-div h5 {
+    font-size: 20px;
+    color: var(--para-color, #1C1C1C);
+    font-weight: 600;
+    padding: 15px 10px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.checkout .container .last-panal .order .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #6F6F6F;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.checkout .container .last-panal .order .text:last-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    background-color: #e5e5e5;
+}
+
+.checkout .container .last-panal .order .oc-text {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.checkout .container .last-panal .order .oc-text h6 {
+    font-size: 16px;
+    color: var(--para-color, #1C1C1C);
+    font-weight: 600;
+}
+
+.checkout .container .last-panal .order .oc-text.total {
+    padding: 20px;
+    border-top: 1px solid var(--sub-color, #edf1ff);
+    width: 100%;
+}
+
+.checkout .container .last-panal .order .oc-text.total h5 {
+    color: var(--para-color, #1C1C1C);
+    font-size: 20px;
+}
+
+.checkout .container .last-panal .pay {
+    border: 1px solid var(--sub-color, #edf1ff);
+}
+
+.checkout .container .last-panal .pay h4 {
+    margin-bottom: 20px;
+}
+
+.checkout .container .last-panal .pay form {
+    padding: 0 10px;
+}
+
+.checkout .container .last-panal .pay form div {
+    padding: 10px;
+    position: relative;
+}
+
+.checkout .container .last-panal .pay form div label {
+    margin-left: 40px;
+    color: #6F6F6F;
+}
+
+.checkout .container .last-panal .pay form div span.checkmark {
+    border: 1px solid #8e8e8e;
+}
+
+.checkout .container .last-panal .pay form div input:checked~.checkmark {
+    border: none;
+}
+
+.checkout .container .last-panal .pay .place {
+    padding: 20px;
+    border-top: 1px solid var(--sub-color, #edf1ff);
+}
+
+.checkout .container .last-panal .pay .place button {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--main-color, #d19c97);
+    border: none;
+    padding: 20px;
+    font-weight: 700;
+    color: var(--para-color, #1C1C1C);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+.checkout .container .last-panal .pay .place button:hover {
+    background-color: #c5837c;
+    color: white;
+}
+
+/* End Checkout */
