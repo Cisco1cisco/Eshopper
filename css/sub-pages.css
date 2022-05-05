@@ -1022,6 +1022,11 @@ input:checked~.checkmark:after {
     position: relative;
 }
 
+.checkout .container .last-panal .pay input {
+    top: 0;
+    left: 0;
+}
+
 .checkout .container .last-panal .pay form div label {
     margin-left: 40px;
     color: #6F6F6F;
